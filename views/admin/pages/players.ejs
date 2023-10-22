@@ -1,0 +1,84 @@
+<style>
+    .avatar{max-width: 100px;}
+    #formPlayer{width: 25%; min-width: 350px; position: absolute;right:0; bottom:0; border: solid 0.5px gray; padding:10px; background-color: aliceblue;}
+    #formPlayer form div{margin-bottom: 10px;}
+    #btnCloseForm{margin: 10px; text-align: right; cursor: pointer;}
+</style>
+
+<script>
+    $(document).ready(function(){
+        $("#formPlayer").fadeOut(0);
+        $("#btnCreateNew").click(function(){
+            $("#formPlayer").fadeIn(300);
+        });
+        $("#btnCloseForm").click(function(){
+            $("#formPlayer").fadeOut(100);
+        });
+    });
+</script>
+
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h4 class="text-themecolor">Players managament</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-end">
+        <div class="d-flex justify-content-end align-items-center">
+            <ol class="breadcrumb justify-content-end">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active">Players management</li>
+            </ol>
+            <button id="btnCreateNew" type="button" class="btn btn-info d-none d-lg-block m-l-15 text-white"><i class="fa fa-plus-circle"></i> Create New</button>
+        </div>
+    </div>
+</div>
+
+  <ul class="list-group mb-3">
+    <li class="list-group-item d-flex justify-content-between lh-sm">
+      <div>
+        <h6 class="my-0">Michale jackson</h6>
+        <small class="text-body-secondary">
+            <img class="avatar" src="./images/avatar.png" alt="">
+        </small>
+      </div>
+      <span class="text-body-secondary">620</span>
+      <div>
+        <h6 class="my-0">Product name</h6>
+        <small class="text-body-secondary">Brief description</small>
+      </div>
+      <div>
+        <div class="row">
+            <div class="col-6"><button class="w-100 btn btn-primary btn-lg" type="button">Edit</button></div>
+            <div class="col-6"><button class="w-100 btn btn-primary btn-lg" type="button">Delete</button></div>
+        </div>
+        
+      </div>
+    </li>
+    
+  </ul>
+
+
+<div id="formPlayer">
+    <div id="btnCloseForm">[x]</div>
+    <form class="card p-2">
+        <div class="input-group">
+          <input id="txt_Name" type="text" class="form-control" placeholder="Name" />
+          <!-- <button type="submit" class="btn btn-secondary">Redeem</button> -->
+        </div>
+        <div class="input-group">
+            <input id="txt_Point" type="text" class="form-control" placeholder="Point" />
+            <!-- <button type="submit" class="btn btn-secondary">Redeem</button> -->
+        </div>
+        <div class="input-group">
+            <input type="file" class="form-control" />
+            <small class="text-body-secondary">
+                <img class="avatar" src="./images/avatar.png" alt="">
+                <input type="hidden" id="hid_avatar" value="avatar.png">
+            </small>
+            <!-- <button type="submit" class="btn btn-secondary">Redeem</button> -->
+          </div>
+        <div class="row">
+            <div class="col-6"><button class="w-100 btn btn-primary btn-lg" type="button">Update</button></div>
+            <div class="col-6"><button class="w-100 btn btn-primary btn-lg" type="button">New</button></div>
+        </div>
+    </form>
+</div>
